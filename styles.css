@@ -1,0 +1,607 @@
+
+:root {
+  --Neutral-900: hsl(33, 15%, 15%);
+  --Neutral-800: hsl(33, 22%, 20%);
+  --Neutral-700: hsl(32, 20%, 29%);
+  --Neutral-600: hsl(33, 17%, 41%);
+  --Neutral-400: hsl(36, 22%, 86%);
+  --Neutral-200: hsl(30, 24%, 93%);
+  --Neutral-100: hsl(35, 60%, 96%);
+  --Neutral-50: hsl(40, 60%, 98%);
+  --Neutral-0: hsl(0, 0%, 100%);
+  --Sun-500: hsl(42, 83%, 58%);
+  --Sun-300: hsl(44, 84%, 75%);
+  --Sun-200: hsl(45, 100%, 74%);
+  --Sun-50: hsl(41, 100%, 93%);
+  --Terracotta-700: hsl(15, 69%, 37%);
+  --Terracotta-600: hsl(15, 74%, 41%);
+  --Terracotta-500: hsl(18, 62%, 47%);
+  --Terracotta-400: hsl(22, 72%, 56%);
+  --Blue-500: hsl(230, 49%, 56%);
+  --Rose-500: hsl(340, 48%, 52%);
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/dm-sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/dm-mono/DMMono-Regular.ttf") format("truetype");
+  font-weight: 400 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/dm-mono/DMMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: flex;
+    font-size: 14px;
+    background-color: var(--Neutral-100);
+    font-family: "DM Sans", sans-serif;
+    height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", serif;
+}
+
+/* Aside styles */
+.sidebar{
+  width: 260px;
+  padding:15px;
+  border-right: 1px solid var(--Neutral-400);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar_logo img{
+  width: 60%;
+  height: auto;
+}
+
+.sidebar_logo::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: .5px;
+  background-color: var(--Neutral-400);
+  margin-top: 8px;
+}
+
+.aside_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.aside_nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.aside_links{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: 6px;
+}
+
+.aside_links:hover{
+  background-color: var(--Neutral-0);
+  border: 2px solid var(--Rose-500);
+  cursor: pointer;
+}
+
+.aside_links span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 85px;
+  font-size: .7rem;
+  width: 15px;
+  height: 15px;
+  border-radius:50%;
+  background-color: var(--Rose-500);
+  color: var(--Neutral-0);
+}
+
+.aside_social{
+  margin-top: 270px;
+}
+
+.aside_weather{
+  position: relative;
+  background-color: var(--Sun-300);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.aside_title{
+  font-size: .7rem;
+  color: var(--Neutral-900);
+  margin-bottom: 5px;
+  font-family: "DM Mono", sans-serif;
+  text-transform: uppercase;
+}
+
+.aside_grados{
+  font-size: 1.8rem;
+  color: var(--Neutral-900);
+  font-family: "Fraunces", serif;
+  margin-bottom: 5px;
+}
+
+.aside_parrafo{
+  font-size: .7rem;
+  color: var(--Neutral-900);
+  margin-bottom: 5px;
+}
+
+.aside_weather_sun{
+  position: absolute;
+  bottom: 50px;
+  left: 160px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.aside_info_parrafo{
+  font-size: .7rem;
+  color: var(--Neutral-900);
+  margin-bottom: 5px;
+  font-family: "DM Mono", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Main content styles */
+.main{
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  flex: 1;
+}
+
+.header_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  height: 100px;
+}
+
+.header_title_h1{
+  font-size: .9rem;
+  color: var(--Neutral-600);
+  font-family: "DM Mono", serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header_title_p{
+  font-size: 1.9rem;
+  color: var(--Neutral-900);
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.header_title_p span{
+  color: var(--Rose-500);
+  font-style: italic;
+}
+
+.header_navigation{
+  display: flex;
+  gap: 20px;
+}
+
+.header_button_print{
+  background-color: transparent;
+  color: var(--Neutral-900);
+  font-weight: bold;
+  border: 1px solid var(--Neutral-600);
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.header_button_print:hover{
+  border: 2px solid var(--Rose-500);
+}
+
+.header_button_calendar{
+  background-color: black;
+  color: var(--Neutral-0);
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.header_button_calendar:hover{
+  background-color: var(--Rose-500);
+}
+
+/* -----------CARD UNO--------------- */
+.cards_container{
+  width: 100%;
+  background-image: url(././assets/images/illustration-sun.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 120px;
+  cursor: pointer;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.card_one{
+  width:400px;
+  padding: 20px;
+  background-color: var(--Neutral-0);
+  transform: rotate(-5deg);
+  border-radius: 10px;
+  box-shadow: 10px 5px 20px var(--Neutral-600);
+}
+
+.card_one_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card_one_header_p{
+  font-size: .7rem;
+  color: var(--Neutral-600);
+  font-family: "DM Mono", serif;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.card_one_header_h2{
+  font-size: 1.3rem;
+  color: var(--Neutral-900);
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+}
+
+.card_one_header_info{
+  font-size: .8rem;
+  font-family: "Fraunces", serif;
+  text-align: right;
+  color: var(--Neutral-600);
+ 
+}
+
+.card_one_body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 2ch;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.card_one_body_info{
+  font-size: .8rem;
+  font-family: "Fraunces", serif;
+  color: var(--Neutral-600);
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+.card_one_body_check{
+  font-size: .7rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.card_one_body_date{
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card_one_body_day{
+  font-size: .7rem;
+  color: var(--Neutral-600);
+  font-family: "DM Mono", serif;
+  margin-bottom: 5px;
+}
+
+.card_one_precios{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.card_one_precios_title{
+  display: flex;
+  justify-content: space-between;
+  font-size: .7rem;
+  color: var(--Neutral-600);
+  font-family: "Fraunces", serif;
+  margin-bottom: 5px;
+}
+
+.card_one_precios_title_p{
+  font-size: .7rem;
+  color: var(--Neutral-900);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card_one_precios_title_h3{
+  font-size: .7rem;
+  color: var(--Neutral-900);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card_one_total{
+  display: flex;
+  flex-direction: column;
+  
+  width: 90%;
+  font-size: .7rem;
+  color: var(--Neutral-600);
+  font-family: "Fraunces", serif;
+}
+
+.card_one_div, .card_one_barra{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  font-size: .7rem;
+  color: var(--Neutral-600);
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+
+.card_one_barra_total{
+  font-size: 1.3rem;
+  color: var(--Neutral-900);
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+}
+
+.card_two{
+  width:400px;
+  padding: 20px;
+  background: linear-gradient(180deg, var(--Terracotta-400) 0%, var(--Terracotta-600) 100%);
+  transform: rotate(5deg);
+  border-radius: 10px;
+}
+
+.card_two_line{
+  width: 100%;
+  border: 1px dashed var(--Terracotta-500);
+  margin-bottom: 20px;
+}
+
+.card_two_header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.card_two_title{
+  font-size: .7rem;
+  color: var(--Neutral-400);
+  font-family: "DM Mono", serif;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.card_two_body_p{
+  font-size: 1.2rem;
+  color: var(--Neutral-0);
+  font-family: "Fraunces", serif;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.card_two_body_h2{
+  font-size: 1.9rem;
+  color: var(--Neutral-0);
+  font-family: "Fraunces", serif;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.card_two_body_parrafo{
+  font-size: .93rem;
+  color: var(--Neutral-0);
+  font-weight: 200;
+  font-family: "Fraunces", serif;
+  margin-bottom: 65px;
+}
+
+.card_two_footer_p{
+  font-size: .7rem;
+  color: var(--Neutral-0);
+  font-family: "DM Mono", serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card_two_footer_h3{
+  font-size: 1.3rem;
+  color: var(--Neutral-0);
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+}
+
+
+/* -------------------CARDS NUMBERS------------------ */
+.section_cards_numbers{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.card_uno, .card_dos, .card_tres{
+  width: 380px;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: var(--Neutral-0);
+  box-shadow: 5px 5px 5px rgba(52, 9, 9, 0.221);
+}
+
+.card_uno_title, .card_dos_title, .card_tres_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.card_uno_div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  color: var(--Terracotta-700);
+  font-family: Fraunces, sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card_uno_img{
+  background-color: var(--Terracotta-700);
+  width: 35px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card_uno_p_numero{
+  color: var(--Terracotta-700);
+  font-family: Fraunces, sans-serif;
+  font-size: 1.3rem;
+}
+
+.card_uno_p_check{
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: Fraunces;
+  margin-bottom: 5px;
+}
+
+.card_uno_p_fecha{
+  color:var(--Neutral-600);
+  margin-bottom: 10px;
+}
+
+.card_uno_parrafo{
+  font-size: .95rem;
+  color: var(--Neutral-900);
+}
+
+.card_azul{
+  background-color: var(--Blue-500);
+  width: 35px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.azul{
+   color: var(--Blue-500);
+  font-family: Fraunces, sans-serif;
+  font-size: 1.1rem;
+}
+
+.card_p_azul{
+  color: var(--Blue-500);
+  font-family: Fraunces, sans-serif;
+  font-size: 1.3rem;
+}
+
+
+.card_dos_section_one{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(128, 128, 128, 0.205);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.card_dos_section_titulo{
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-family: DS Sans;
+  color: var(--Neutral-600);
+}
+
+.card_dos_section_p{
+  color: var(--Neutral-900);
+  font-weight: 500;
+}
+
+.card_dos_section_p span{
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: var(--Neutral-600);
+  margin-left: 10px;
+}
+
+.card_rosa{
+  background-color: var(--Rose-500);
+  width: 35px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card_p_rosa{
+   color: var(--Rose-500);
+  font-family: Fraunces, sans-serif;
+  font-size: 1.3rem;
+}

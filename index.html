@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Hotel booking confirmation page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar starts -->
+    <aside class="sidebar">
+      <div class="sidebar_logo">
+        <img src="./assets/images/logo.svg" alt="Maison Soleil logo" />
+      </div>
+
+      <div class="aside_div">
+        <ul class="aside_nav">
+          <li class="aside_links">
+            <img src="./assets/images/icon-bed.svg" alt="" /> Your stay
+            <span>1</span>
+          </li>
+          <li class="aside_links">
+            <img src="./assets/images/icon-house.svg" alt="" /> The house
+          </li>
+          <li class="aside_links">
+            <img src="./assets/images/icon-pin.svg" alt="" /> Around town
+          </li>
+          <li class="aside_links">
+            <img
+              src="./assets/images/icon-breakfast-outline.svg"
+              alt="./assets/images/icon-breakfast.svg"
+              alt=""
+            />
+            Breakfast
+          </li>
+          <li class="aside_links">
+            <img src="./assets/images/icon-mail.svg" alt="" /> Messages
+          </li>
+        </ul>
+
+        <section class="aside_social">
+          <div class="aside_weather">
+            <div class="aside_weather_sun">
+              <img src="./assets/images/icon-weather.svg" alt="">
+            </div>
+            <p class="aside_title">Today in Cassis</p>
+            <p class="aside_grados">27°</p>
+            <p class="aside_parrafo">Sunny · light breeze</p>
+          </div>
+          <section class="aside_info">
+            <p class="aside_info_parrafo">Est. 1987</p>
+            <p class="aside_info_parrafo">
+              Maison Soleil · 12 Rue des Oliviers · Cassis
+            </p>
+            <p class="aside_info_parrafo">© 2026 Maison Soleil</p>
+          </section>
+        </section>
+      </div>
+    </aside>
+
+    <!-- Main content starts -->
+
+    <main class="main">
+      <header class="header_container">
+        <div class="header_title">
+          <p class="header_title_h1">Booking - confirmed</p>
+          <h1 class="header_title_p">
+            Bienvenue, <span class="header_title_span">Lucia.</span>
+          </h1>
+        </div>
+
+        <div class="header_navigation">
+          <button class="header_button_print">Print receipt</button>
+          <button class="header_button_calendar">Add to calendar</button>
+        </div>
+      </header>
+
+      <!-- Booking cards start -->
+
+      <section class="cards_container">
+         
+        <!-- Receipt card -->
+         <section class="cards">
+        <div class="card_one">
+          <header class="card_one_header">
+            <div class="card_one_header_title">
+            <p class="card_one_header_p">Receipt</p>
+            <h2 class="card_one_header_h2">Your Stay</h2>
+            </div>
+             
+            <div class="card_one_header_info">
+              <p class="card_one_number">№ MS-2026</p>
+              <p class="card_one_number">0421-AH</p>
+            </div>
+          </header>
+          <hr>
+
+          <section class="card_one_body">
+            <div class="card_one_body_info">
+              <p class="card_one_body_check">Check in</p>
+              <h3 class="card_one_body_date">25 Apr</h3>
+              <p class="card_one_body_day">Saturday - 15:00</p>
+            </div>
+
+            <div class="card_one_body_info">
+              <p class="card_one_body_check">Check out</p>
+              <h3 class="card_one_body_date">29 Apr</h3>
+              <p class="card_one_body_day">Wednesday - 11:00</p>
+            </div>
+          </section>
+
+          <hr>
+
+          <section class="card_one_precios">
+            <div class="card_one_precios_title">
+              <p class="card_one_precios_title_p">Room · La Garrigue · 4 nights</p>
+              <p class="card_one_precios_title_h3">€ 620.00</p>
+            </div>
+            <div class="card_one_precios_title">
+              <p class="card_one_precios_title_p">Breakfast · 2 guests</p>
+              <p class="card_one_precios_title_h3">€ 96.00</p>
+            </div>
+            <div class="card_one_precios_title">
+              <p class="card_one_precios_title_parrafo">Tourist tax</p>
+              <p class="card_one_precios_title_euro">€ 14.40</p>
+            </div>
+          </section>
+
+          <hr>
+
+          <section class="card_one_total">
+            <div class="card_one_div">
+            <p class="card_one_total_p">Total paid</p>
+            <p class="card_one_barra_total">€ 730.40</p>
+            
+            </div>
+
+            <div class="card_one_barra">
+              <p class="card_one_total_h3">paid - wise- gbp</p>
+              <img src="./assets/images/icon-barcode.svg" alt="barcode" />
+            </div>
+            </div>
+
+
+
+            <!-- Note from host card -->
+
+      <section class="card_two">
+        <div class="card_two_line"></div>
+        <div class="card_two_header">
+          <p class="card_two_title">Welcome card</p>
+          <img src="./assets/images/icon-sun.svg" alt="welcome icon" />
+        </div>
+
+        <div class="card_two_body">
+          <p class="card_two_body_p">A note from your host,</p>
+          <p class="card_two_body_h2">Margaux.</p>
+          <p class="card_two_body_parrafo">We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.</p>
+        </div>
+
+        <div class="card_two_footer">
+          <p class="card_two_footer_p">Room</p>
+          <h3 class="card_two_footer_h3">La Garrigue</h3>
+        </div>
+        </section>
+         
+     <!-- Booking cards end -->
+    
+    </section>
+        
+    <!-- Guest info row starts -->
+     <div class="section_cards_numbers">
+      <!-- Arrival -->
+      <div class="card_uno">
+        <div class="card_uno_title">
+          <div class="card_uno_div">
+          <img src="./assets/images/icon-key.svg" alt="icon_key" class="card_uno_img">
+          <p class="card_uno_p">Arrival</p>
+          </div>
+          <p class="card_uno_p_numero">01</p>
+        </div> 
+          
+          <p class="card_uno_p_check">Check-in from 15:00</p>
+          <p class="card_uno_p_fecha">Sat, 25 April</p>
+          <p class="card_uno_parrafo">Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+        
+      </div>
+     
+
+      <!-- Wifi -->
+       <div class="card_dos">
+        <div class="card_uno_title">
+          <div class="card_uno_div">
+         <img src="./assets/images/icon-wifi.svg" alt="icon_wifi" class="card_dos_img card_azul">
+          <p class="card_uno_p azul">Wifi</p>
+        </div>
+          <p class="card_uno_p_numero card_p_azul">02</p>
+        </div>
+          <p class="card_uno_p_check">Le Soleil · Guest</p>
+          <p class="card_uno_p_fecha">Password below</p>
+
+          <div class="card_dos_section">
+            <div class="card_dos_section_one">
+              <p class="card_dos_section_titulo">Network</p>
+              <p class="card_dos_section_p">Le Soleil · Guest</p>
+            </div>
+
+            <div class="card_dos_section_one">
+              <p class="card_dos_section_titulo">Password</p>
+              <p class="card_dos_section_p"> soleil-2026 <span>Copy</span></p>
+            </div>
+          </div>
+       </div>
+
+      
+
+      <!-- Breakfast -->
+       <div class="card_tres">
+       <div class="card_tres_title">
+        <div class="card_uno_div">
+          <img src="./assets/images/icon-breakfast.svg" alt="icon_key" class="card_tres_img card_rosa">
+          <p class="card_uno_p rosa">Breakfast</p>
+          </div>
+          <p class="card_uno_p_numero card_p_rosa">03</p>
+        </div> 
+          <p class="card_uno_p_check">Served 8 - 10:30</p>
+          <p class="card_uno_p_fecha">On the terrace</p>
+          <p class="card_uno_parrafo">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.</p>
+        
+      </div>
+      </div>
+      <!-- Guest info row ends -->
+    </main>
+    <!-- Main content ends -->
+  </body>
+</html>
