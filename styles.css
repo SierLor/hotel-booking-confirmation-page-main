@@ -135,7 +135,7 @@ h1, h2, h3 {
 }
 
 .aside_social{
-  margin-top: 270px;
+  margin-top: 340px;
 }
 
 .aside_weather{
@@ -199,6 +199,7 @@ h1, h2, h3 {
   align-items: center;
   padding: 15px 30px;
   height: 100px;
+  margin-bottom: 50px;
 }
 
 .header_title_h1{
@@ -260,8 +261,8 @@ h1, h2, h3 {
   width: 100%;
   background-image: url(././assets/images/illustration-sun.svg);
   background-repeat: no-repeat;
-  background-position: center;
-  background-position-y: 120px;
+  background-position: 50% 120px;
+  background-size: auto;
   cursor: pointer;
 }
 
@@ -269,8 +270,11 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
+  position: relative;
 }
+
+
 .card_one{
   width:400px;
   padding: 20px;
@@ -414,8 +418,40 @@ h1, h2, h3 {
   padding: 20px;
   background: linear-gradient(180deg, var(--Terracotta-400) 0%, var(--Terracotta-600) 100%);
   transform: rotate(5deg);
+  transform-origin: center;
   border-radius: 10px;
+  box-shadow: 10px 5px 20px var(--Terracotta-600);
+  transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .35s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
+
+/* Hover on the group keeps the cards centered while they move apart */
+.cards:hover .card_two{
+  transform: rotate(-10deg) translateX(80px) translateY(-8px);
+  box-shadow: 22px 12px 40px hsla(15,74%,41%,0.28);
+  z-index: 6;
+}
+
+
+
+.card_one{
+  z-index: 1;
+  transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .35s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.cards:hover .card_one{
+  transform: rotate(10deg) translateX(-80px) translateY(-8px);
+  box-shadow: -22px 12px 40px rgba(52, 9, 9, 0.18);
+  z-index: 6;
+}
+
+
+
+
 
 .card_two_line{
   width: 100%;
@@ -476,7 +512,19 @@ h1, h2, h3 {
   font-weight: 400;
 }
 
+.hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 40px;
+}
 
+.hover_p{
+  font-size: .8rem;
+  color: var(--Neutral-600);
+
+}
 /* -------------------CARDS NUMBERS------------------ */
 .section_cards_numbers{
   display: flex;
