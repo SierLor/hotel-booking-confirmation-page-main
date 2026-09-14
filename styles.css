@@ -536,6 +536,7 @@ h1, h2, h3 {
 .section_cards_numbers{
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   padding: 0 30px;
   margin-bottom: 40px;
 }
